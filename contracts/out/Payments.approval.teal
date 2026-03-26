@@ -5,20 +5,20 @@
 main:
     intcblock 0 1 32 8
     bytecblock "b" "a" "n" "c"
-    // contracts/payments.algo.ts:42
+    // contracts/payments.algo.ts:45
     // export class Payments extends Contract {
     txn OnCompletion
     !
     assert
     txn ApplicationID
-    bz main_create_NoOp@7
-    pushbytess 0xaf236ac3 0x2753e742 0xaa457d24 // method "addToCirculation(uint64,address)void", method "instantiateAccount(address)void", method "transfer(address,address,uint64)void"
+    bz main_create_NoOp@9
+    pushbytess 0xaf236ac3 0x2753e742 0x0d977723 0xaa457d24 0xab5b4c77 // method "addToCirculation(uint64,address)void", method "instantiateAccount(address)void", method "instantiateAccounts(address[])void", method "transfer(address,address,uint64)void", method "multiTransfer((address,address,uint64)[])void"
     txna ApplicationArgs 0
-    match addToCirculation instantiateAccount transfer
+    match addToCirculation instantiateAccount instantiateAccounts transfer multiTransfer
     err
 
-main_create_NoOp@7:
-    // contracts/payments.algo.ts:42
+main_create_NoOp@9:
+    // contracts/payments.algo.ts:45
     // export class Payments extends Contract {
     pushbytes 0x973b616f // method "createApplication(uint64)void"
     txna ApplicationArgs 0
@@ -28,7 +28,7 @@ main_create_NoOp@7:
 
 // contracts/payments.algo.ts::Payments.createApplication[routing]() -> void:
 createApplication:
-    // contracts/payments.algo.ts:51
+    // contracts/payments.algo.ts:54
     // createApplication(supply: uint64) {
     txna ApplicationArgs 1
     dup
@@ -37,28 +37,28 @@ createApplication:
     ==
     assert // invalid number of bytes for arc4.uint64
     btoi
-    // contracts/payments.algo.ts:43
+    // contracts/payments.algo.ts:46
     // admin = GlobalState<Account>({ key: "a" });
     bytec_1 // "a"
-    // contracts/payments.algo.ts:52
+    // contracts/payments.algo.ts:55
     // this.admin.value = Txn.sender;
     txn Sender
     app_global_put
-    // contracts/payments.algo.ts:47
+    // contracts/payments.algo.ts:50
     // nonCirculatingSupply = GlobalState<uint64>({ key: "n" });
     bytec_2 // "n"
-    // contracts/payments.algo.ts:53
+    // contracts/payments.algo.ts:56
     // this.nonCirculatingSupply.value = supply;
     swap
     app_global_put
-    // contracts/payments.algo.ts:49
+    // contracts/payments.algo.ts:52
     // circulatingSupply = GlobalState<uint64>({ key: "c" });
     bytec_3 // "c"
-    // contracts/payments.algo.ts:54
+    // contracts/payments.algo.ts:57
     // this.circulatingSupply.value = 0;
     intc_0 // 0
     app_global_put
-    // contracts/payments.algo.ts:51
+    // contracts/payments.algo.ts:54
     // createApplication(supply: uint64) {
     intc_1 // 1
     return
@@ -66,7 +66,7 @@ createApplication:
 
 // contracts/payments.algo.ts::Payments.addToCirculation[routing]() -> void:
 addToCirculation:
-    // contracts/payments.algo.ts:57
+    // contracts/payments.algo.ts:60
     // addToCirculation(amount: uint64, receiver: Account) {
     txna ApplicationArgs 1
     dup
@@ -81,69 +81,69 @@ addToCirculation:
     intc_2 // 32
     ==
     assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
-    // contracts/payments.algo.ts:58
+    // contracts/payments.algo.ts:61
     // assert(Txn.sender === this.admin.value, "only admin can circulate tokens");
     txn Sender
     intc_0 // 0
-    // contracts/payments.algo.ts:43
+    // contracts/payments.algo.ts:46
     // admin = GlobalState<Account>({ key: "a" });
     bytec_1 // "a"
-    // contracts/payments.algo.ts:58
+    // contracts/payments.algo.ts:61
     // assert(Txn.sender === this.admin.value, "only admin can circulate tokens");
     app_global_get_ex
     assert // check GlobalState exists
     ==
     assert // only admin can circulate tokens
-    // contracts/payments.algo.ts:45
+    // contracts/payments.algo.ts:48
     // balances = BoxMap<Account, uint64>({ keyPrefix: "b" });
     bytec_0 // "b"
     swap
     concat
-    // contracts/payments.algo.ts:59
+    // contracts/payments.algo.ts:62
     // assert(this.balances(receiver).exists, "receiver does not exist");
     dup
     box_len
     bury 1
     assert // receiver does not exist
-    // contracts/payments.algo.ts:61
+    // contracts/payments.algo.ts:64
     // this.circulatingSupply.value += amount;
     intc_0 // 0
-    // contracts/payments.algo.ts:49
+    // contracts/payments.algo.ts:52
     // circulatingSupply = GlobalState<uint64>({ key: "c" });
     bytec_3 // "c"
-    // contracts/payments.algo.ts:61
+    // contracts/payments.algo.ts:64
     // this.circulatingSupply.value += amount;
     app_global_get_ex
     assert // check GlobalState exists
     dig 2
     +
-    // contracts/payments.algo.ts:49
+    // contracts/payments.algo.ts:52
     // circulatingSupply = GlobalState<uint64>({ key: "c" });
     bytec_3 // "c"
-    // contracts/payments.algo.ts:61
+    // contracts/payments.algo.ts:64
     // this.circulatingSupply.value += amount;
     swap
     app_global_put
-    // contracts/payments.algo.ts:62
+    // contracts/payments.algo.ts:65
     // this.nonCirculatingSupply.value -= amount;
     intc_0 // 0
-    // contracts/payments.algo.ts:47
+    // contracts/payments.algo.ts:50
     // nonCirculatingSupply = GlobalState<uint64>({ key: "n" });
     bytec_2 // "n"
-    // contracts/payments.algo.ts:62
+    // contracts/payments.algo.ts:65
     // this.nonCirculatingSupply.value -= amount;
     app_global_get_ex
     assert // check GlobalState exists
     dig 2
     -
-    // contracts/payments.algo.ts:47
+    // contracts/payments.algo.ts:50
     // nonCirculatingSupply = GlobalState<uint64>({ key: "n" });
     bytec_2 // "n"
-    // contracts/payments.algo.ts:62
+    // contracts/payments.algo.ts:65
     // this.nonCirculatingSupply.value -= amount;
     swap
     app_global_put
-    // contracts/payments.algo.ts:63
+    // contracts/payments.algo.ts:66
     // this.balances(receiver).value += amount;
     dup
     box_get
@@ -153,7 +153,7 @@ addToCirculation:
     +
     itob
     box_put
-    // contracts/payments.algo.ts:57
+    // contracts/payments.algo.ts:60
     // addToCirculation(amount: uint64, receiver: Account) {
     intc_1 // 1
     return
@@ -161,7 +161,7 @@ addToCirculation:
 
 // contracts/payments.algo.ts::Payments.instantiateAccount[routing]() -> void:
 instantiateAccount:
-    // contracts/payments.algo.ts:66
+    // contracts/payments.algo.ts:69
     // instantiateAccount(account: Account) {
     txna ApplicationArgs 1
     dup
@@ -169,43 +169,119 @@ instantiateAccount:
     intc_2 // 32
     ==
     assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
-    // contracts/payments.algo.ts:68
+    // contracts/payments.algo.ts:71
     // Txn.sender === this.admin.value,
     txn Sender
     intc_0 // 0
-    // contracts/payments.algo.ts:43
+    // contracts/payments.algo.ts:46
     // admin = GlobalState<Account>({ key: "a" });
     bytec_1 // "a"
-    // contracts/payments.algo.ts:68
+    // contracts/payments.algo.ts:71
     // Txn.sender === this.admin.value,
     app_global_get_ex
     assert // check GlobalState exists
     ==
-    // contracts/payments.algo.ts:67-70
+    // contracts/payments.algo.ts:70-73
     // assert(
     //   Txn.sender === this.admin.value,
     //   "only admin can instantiate accounts",
     // );
     assert // only admin can instantiate accounts
-    // contracts/payments.algo.ts:45
+    // contracts/payments.algo.ts:48
     // balances = BoxMap<Account, uint64>({ keyPrefix: "b" });
     bytec_0 // "b"
     swap
     concat
-    // contracts/payments.algo.ts:71
+    // contracts/payments.algo.ts:74
     // this.balances(account).value = 0;
     intc_0 // 0
     itob
     box_put
-    // contracts/payments.algo.ts:66
+    // contracts/payments.algo.ts:69
     // instantiateAccount(account: Account) {
+    intc_1 // 1
+    return
+
+
+// contracts/payments.algo.ts::Payments.instantiateAccounts[routing]() -> void:
+instantiateAccounts:
+    // contracts/payments.algo.ts:77
+    // instantiateAccounts(accounts: Account[]) {
+    txna ApplicationArgs 1
+    dupn 2
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    dup
+    cover 2
+    intc_2 // 32
+    *
+    pushint 2
+    +
+    swap
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<account>
+    // contracts/payments.algo.ts:79
+    // Txn.sender === this.admin.value,
+    txn Sender
+    intc_0 // 0
+    // contracts/payments.algo.ts:46
+    // admin = GlobalState<Account>({ key: "a" });
+    bytec_1 // "a"
+    // contracts/payments.algo.ts:79
+    // Txn.sender === this.admin.value,
+    app_global_get_ex
+    assert // check GlobalState exists
+    ==
+    // contracts/payments.algo.ts:78-81
+    // assert(
+    //   Txn.sender === this.admin.value,
+    //   "only admin can instantiate accounts",
+    // );
+    assert // only admin can instantiate accounts
+    intc_0 // 0
+
+instantiateAccounts_for_header@2:
+    // contracts/payments.algo.ts:83
+    // for (const account of accounts) {
+    dup
+    dig 2
+    <
+    bz instantiateAccounts_after_for@5
+    dig 2
+    extract 2 0
+    dig 1
+    dup
+    cover 2
+    intc_2 // 32
+    *
+    intc_2 // 32
+    extract3 // on error: index access is out of bounds
+    // contracts/payments.algo.ts:48
+    // balances = BoxMap<Account, uint64>({ keyPrefix: "b" });
+    bytec_0 // "b"
+    swap
+    concat
+    // contracts/payments.algo.ts:84
+    // this.balances(account).value = 0;
+    intc_0 // 0
+    itob
+    box_put
+    intc_1 // 1
+    +
+    bury 1
+    b instantiateAccounts_for_header@2
+
+instantiateAccounts_after_for@5:
+    // contracts/payments.algo.ts:77
+    // instantiateAccounts(accounts: Account[]) {
     intc_1 // 1
     return
 
 
 // contracts/payments.algo.ts::Payments.transfer[routing]() -> void:
 transfer:
-    // contracts/payments.algo.ts:74
+    // contracts/payments.algo.ts:95
     // transfer(sender: Account, receiver: Account, amount: uint64) {
     txna ApplicationArgs 1
     dup
@@ -226,51 +302,10 @@ transfer:
     ==
     assert // invalid number of bytes for arc4.uint64
     btoi
-    // contracts/payments.algo.ts:45
-    // balances = BoxMap<Account, uint64>({ keyPrefix: "b" });
-    bytec_0 // "b"
-    uncover 3
-    concat
-    // contracts/payments.algo.ts:75
-    // assert(this.balances(sender).exists, "sender does not exist");
-    dup
-    box_len
-    bury 1
-    assert // sender does not exist
-    // contracts/payments.algo.ts:45
-    // balances = BoxMap<Account, uint64>({ keyPrefix: "b" });
-    bytec_0 // "b"
-    uncover 3
-    concat
-    // contracts/payments.algo.ts:76
-    // assert(this.balances(receiver).exists, "receiver does not exist");
-    dup
-    box_len
-    bury 1
-    assert // receiver does not exist
-    // contracts/payments.algo.ts:77
-    // this.balances(sender).value -= amount;
-    dig 1
-    box_get
-    pop
-    btoi
-    dig 3
-    -
-    itob
-    uncover 2
-    swap
-    box_put
-    // contracts/payments.algo.ts:78
-    // this.balances(receiver).value += amount;
-    dup
-    box_get
-    pop
-    btoi
-    uncover 2
-    +
-    itob
-    box_put
-    // contracts/payments.algo.ts:15
+    // contracts/payments.algo.ts:96
+    // this._transfer(sender, receiver, amount);
+    callsub _transfer
+    // contracts/payments.algo.ts:16
     // const feePayment = gtxn.PaymentTxn(Txn.groupIndex + 1);
     txn GroupIndex
     intc_1 // 1
@@ -280,45 +315,45 @@ transfer:
     intc_1 // pay
     ==
     assert // transaction type is pay
-    // contracts/payments.algo.ts:20
+    // contracts/payments.algo.ts:21
     // feePayment.sender === Txn.sender &&
     gtxns Sender
     txn Sender
     ==
-    // contracts/payments.algo.ts:20-22
+    // contracts/payments.algo.ts:21-23
     // feePayment.sender === Txn.sender &&
     // // Checking the receiver is probably superfluous since we later check close, but might as well be safe
     // feePayment.receiver === Global.currentApplicationAddress &&
     bz transfer_after_if_else@6
-    // contracts/payments.algo.ts:22
+    // contracts/payments.algo.ts:23
     // feePayment.receiver === Global.currentApplicationAddress &&
     dup
     gtxns Receiver
     global CurrentApplicationAddress
     ==
-    // contracts/payments.algo.ts:20-22
+    // contracts/payments.algo.ts:21-23
     // feePayment.sender === Txn.sender &&
     // // Checking the receiver is probably superfluous since we later check close, but might as well be safe
     // feePayment.receiver === Global.currentApplicationAddress &&
     bz transfer_after_if_else@6
-    // contracts/payments.algo.ts:24
+    // contracts/payments.algo.ts:25
     // feePayment.amount === 0 &&
     dup
     gtxns Amount
-    // contracts/payments.algo.ts:20-24
+    // contracts/payments.algo.ts:21-25
     // feePayment.sender === Txn.sender &&
     // // Checking the receiver is probably superfluous since we later check close, but might as well be safe
     // feePayment.receiver === Global.currentApplicationAddress &&
     // // Ensure the amount is zero so we can be sure the account is not spending ALGO on anything else
     // feePayment.amount === 0 &&
     bnz transfer_after_if_else@6
-    // contracts/payments.algo.ts:28
+    // contracts/payments.algo.ts:29
     // feePayment.closeRemainderTo === Global.currentApplicationAddress
     dup
     gtxns CloseRemainderTo
     global CurrentApplicationAddress
     ==
-    // contracts/payments.algo.ts:20-28
+    // contracts/payments.algo.ts:21-29
     // feePayment.sender === Txn.sender &&
     // // Checking the receiver is probably superfluous since we later check close, but might as well be safe
     // feePayment.receiver === Global.currentApplicationAddress &&
@@ -329,7 +364,7 @@ transfer:
     // // This is also important for the future when fees may be refundable
     // feePayment.closeRemainderTo === Global.currentApplicationAddress
     bz transfer_after_if_else@6
-    // contracts/payments.algo.ts:32-38
+    // contracts/payments.algo.ts:33-39
     // itxn
     //   .payment({
     //     receiver: Txn.sender,
@@ -338,10 +373,10 @@ transfer:
     //   })
     //   .submit();
     itxn_begin
-    // contracts/payments.algo.ts:34
+    // contracts/payments.algo.ts:35
     // receiver: Txn.sender,
     txn Sender
-    // contracts/payments.algo.ts:36
+    // contracts/payments.algo.ts:37
     // amount: Global.minBalance + feePayment.fee,
     global MinBalance
     dig 2
@@ -349,7 +384,7 @@ transfer:
     +
     itxn_field Amount
     itxn_field Receiver
-    // contracts/payments.algo.ts:32-37
+    // contracts/payments.algo.ts:33-38
     // itxn
     //   .payment({
     //     receiver: Txn.sender,
@@ -360,7 +395,7 @@ transfer:
     itxn_field TypeEnum
     intc_0 // 0
     itxn_field Fee
-    // contracts/payments.algo.ts:32-38
+    // contracts/payments.algo.ts:33-39
     // itxn
     //   .payment({
     //     receiver: Txn.sender,
@@ -371,7 +406,117 @@ transfer:
     itxn_submit
 
 transfer_after_if_else@6:
-    // contracts/payments.algo.ts:74
+    // contracts/payments.algo.ts:95
     // transfer(sender: Account, receiver: Account, amount: uint64) {
     intc_1 // 1
     return
+
+
+// contracts/payments.algo.ts::Payments.multiTransfer[routing]() -> void:
+multiTransfer:
+    // contracts/payments.algo.ts:100
+    // multiTransfer(transfers: Transfer[]) {
+    txna ApplicationArgs 1
+    dupn 2
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    dup
+    cover 2
+    pushint 72
+    *
+    pushint 2
+    +
+    swap
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<contracts/payments.algo.ts::Transfer>
+    intc_0 // 0
+
+multiTransfer_for_header@2:
+    // contracts/payments.algo.ts:101
+    // for (const { sender, receiver, amount } of clone(transfers)) {
+    dup
+    dig 2
+    <
+    bz multiTransfer_after_for@5
+    dig 2
+    extract 2 0
+    dig 1
+    dup
+    cover 2
+    pushint 72
+    *
+    pushint 72
+    extract3 // on error: index access is out of bounds
+    dup
+    extract 0 32
+    dig 1
+    extract 32 32
+    uncover 2
+    pushint 64
+    extract_uint64
+    // contracts/payments.algo.ts:102
+    // this._transfer(sender, receiver, amount);
+    callsub _transfer
+    intc_1 // 1
+    +
+    bury 1
+    b multiTransfer_for_header@2
+
+multiTransfer_after_for@5:
+    // contracts/payments.algo.ts:100
+    // multiTransfer(transfers: Transfer[]) {
+    intc_1 // 1
+    return
+
+
+// contracts/payments.algo.ts::Payments._transfer(sender: bytes, receiver: bytes, amount: uint64) -> void:
+_transfer:
+    // contracts/payments.algo.ts:88
+    // private _transfer(sender: Account, receiver: Account, amount: uint64) {
+    proto 3 0
+    // contracts/payments.algo.ts:48
+    // balances = BoxMap<Account, uint64>({ keyPrefix: "b" });
+    bytec_0 // "b"
+    frame_dig -3
+    concat
+    // contracts/payments.algo.ts:89
+    // assert(this.balances(sender).exists, "sender does not exist");
+    dup
+    box_len
+    bury 1
+    assert // sender does not exist
+    // contracts/payments.algo.ts:48
+    // balances = BoxMap<Account, uint64>({ keyPrefix: "b" });
+    bytec_0 // "b"
+    frame_dig -2
+    concat
+    // contracts/payments.algo.ts:90
+    // assert(this.balances(receiver).exists, "receiver does not exist");
+    dup
+    box_len
+    bury 1
+    assert // receiver does not exist
+    // contracts/payments.algo.ts:91
+    // this.balances(sender).value -= amount;
+    dig 1
+    box_get
+    pop
+    btoi
+    frame_dig -1
+    -
+    itob
+    uncover 2
+    swap
+    box_put
+    // contracts/payments.algo.ts:92
+    // this.balances(receiver).value += amount;
+    dup
+    box_get
+    pop
+    btoi
+    frame_dig -1
+    +
+    itob
+    box_put
+    retsub

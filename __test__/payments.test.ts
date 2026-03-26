@@ -14,7 +14,7 @@ async function getAlgoBalance(
   return amount;
 }
 
-const PAYMENTS = 50;
+const PAYMENTS = 4;
 
 describe("Payments", () => {
   let algorand: AlgorandClient;
@@ -65,7 +65,7 @@ describe("Payments", () => {
     expect(await userClient.balance(zeroAlgoReceiver)).toBe(10n);
   });
 
-  it(`${PAYMENTS} payments`, async () => {
+  it(`${PAYMENTS} payments in one transaction`, async () => {
     const senders = Array.from({ length: PAYMENTS }, () =>
       algorand.account.random(),
     );
@@ -73,12 +73,12 @@ describe("Payments", () => {
       algorand.account.random(),
     );
 
+    const sendersAndReceivers = [...senders, ...receivers];
+
+    await adminClient.instantiateAccounts(sendersAndReceivers);
+
     for (const sender of senders) {
-      await adminClient.instantiateAccount(sender);
       await adminClient.addToCirculation(1n, sender);
-    }
-    for (const receiver of receivers) {
-      await adminClient.instantiateAccount(receiver);
     }
 
     for (let i = 0; i < PAYMENTS; i++) {

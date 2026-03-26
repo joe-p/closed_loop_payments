@@ -70,6 +70,15 @@ export class PaymentsAdminClient {
       args: { account: getAddress(account).toString() },
     });
   }
+
+  async instantiateAccounts(accounts: ReadableAddress[]) {
+    return await this.appClient.send.instantiateAccounts({
+      sender: this.admin,
+      args: {
+        accounts: accounts.map((account) => getAddress(account).toString()),
+      },
+    });
+  }
 }
 
 export class PaymentsUserClient {

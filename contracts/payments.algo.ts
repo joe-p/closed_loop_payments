@@ -9,6 +9,7 @@ import {
   gtxn,
   Global,
   itxn,
+  clone,
 } from "@algorandfoundation/algorand-typescript";
 
 function coverFee() {
@@ -38,6 +39,8 @@ function coverFee() {
       .submit();
   }
 }
+
+export type Transfer = { sender: Account; receiver: Account; amount: uint64 };
 
 export class Payments extends Contract {
   admin = GlobalState<Account>({ key: "a" });
@@ -71,12 +74,32 @@ export class Payments extends Contract {
     this.balances(account).value = 0;
   }
 
-  transfer(sender: Account, receiver: Account, amount: uint64) {
+  instantiateAccounts(accounts: Account[]) {
+    assert(
+      Txn.sender === this.admin.value,
+      "only admin can instantiate accounts",
+    );
+
+    for (const account of accounts) {
+      this.balances(account).value = 0;
+    }
+  }
+
+  private _transfer(sender: Account, receiver: Account, amount: uint64) {
     assert(this.balances(sender).exists, "sender does not exist");
     assert(this.balances(receiver).exists, "receiver does not exist");
     this.balances(sender).value -= amount;
     this.balances(receiver).value += amount;
+  }
 
+  transfer(sender: Account, receiver: Account, amount: uint64) {
+    this._transfer(sender, receiver, amount);
     coverFee();
+  }
+
+  multiTransfer(transfers: Transfer[]) {
+    for (const { sender, receiver, amount } of clone(transfers)) {
+      this._transfer(sender, receiver, amount);
+    }
   }
 }
