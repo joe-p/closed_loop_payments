@@ -30,8 +30,8 @@ describe("Payments", () => {
       algorand,
       admin,
       supply: 1000n,
-      prefundAccounts: BigInt(MULTI_XFER_PAYMENTS * 2 + 2),
-      prefundTransactions: BigInt(MULTI_XFER_PAYMENTS + 1),
+      prefundAccounts: BigInt(MULTI_XFER_PAYMENTS + 3),
+      prefundTransactions: BigInt(2),
     });
     zeroAlgoSender = algorand.account.random();
     zeroAlgoReceiver = algorand.account.random();
@@ -85,5 +85,13 @@ describe("Payments", () => {
     }
 
     await userClient.multiTransfer(sender, transfers);
+
+    expect(await getAlgoBalance(algorand, sender)).toBe(0n);
+    expect(await userClient.balance(sender)).toBe(0n);
+
+    for (const receiver of receivers) {
+      expect(await userClient.balance(receiver)).toBe(1n);
+      expect(await getAlgoBalance(algorand, receiver)).toBe(0n);
+    }
   });
 });
