@@ -12,7 +12,7 @@ main:
     assert
     txn ApplicationID
     bz main_create_NoOp@9
-    pushbytess 0xaf236ac3 0x2753e742 0x0d977723 0xaa457d24 0xd94b1224 // method "addToCirculation(uint64,address)void", method "instantiateAccount(address)void", method "instantiateAccounts(address[])void", method "transfer(address,address,uint64)void", method "multiTransfer((address,uint64)[])void"
+    pushbytess 0xaf236ac3 0x2753e742 0x0d977723 0x9fee7418 0xd94b1224 // method "addToCirculation(uint64,address)void", method "instantiateAccount(address)void", method "instantiateAccounts(address[])void", method "transfer(address,uint64)void", method "multiTransfer((address,uint64)[])void"
     txna ApplicationArgs 0
     match addToCirculation instantiateAccount instantiateAccounts transfer multiTransfer
     err
@@ -391,7 +391,7 @@ instantiateAccounts_after_for@5:
 // contracts/payments.algo.ts::Payments.transfer[routing]() -> void:
 transfer:
     // contracts/payments.algo.ts:95
-    // transfer(sender: Account, receiver: Account, amount: uint64) {
+    // transfer(receiver: Account, amount: uint64) {
     txna ApplicationArgs 1
     dup
     len
@@ -401,24 +401,20 @@ transfer:
     txna ApplicationArgs 2
     dup
     len
-    intc_2 // 32
-    ==
-    assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
-    txna ApplicationArgs 3
-    dup
-    len
     intc_3 // 8
     ==
     assert // invalid number of bytes for arc4.uint64
     btoi
     // contracts/payments.algo.ts:96
-    // this._transfer(sender, receiver, amount);
+    // this._transfer(Txn.sender, receiver, amount);
+    txn Sender
+    cover 2
     callsub _transfer
     // contracts/payments.algo.ts:97
     // coverFee();
     callsub coverFee
     // contracts/payments.algo.ts:95
-    // transfer(sender: Account, receiver: Account, amount: uint64) {
+    // transfer(receiver: Account, amount: uint64) {
     intc_1 // 1
     return
 

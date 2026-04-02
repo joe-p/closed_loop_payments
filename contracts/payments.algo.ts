@@ -92,8 +92,8 @@ export class Payments extends Contract {
     this.balances(receiver).value += amount;
   }
 
-  transfer(sender: Account, receiver: Account, amount: uint64) {
-    this._transfer(sender, receiver, amount);
+  transfer(receiver: Account, amount: uint64) {
+    this._transfer(Txn.sender, receiver, amount);
     coverFee();
   }
 

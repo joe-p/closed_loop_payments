@@ -3,7 +3,7 @@
   "sources": [
     "../payments.algo.ts"
   ],
-  "mappings": ";;;;;;;;;;;;;;;;;AA4CA;;AAAA;AAAA;AAAA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;AAAA;AAAA;;;;;;AAAA;;;AAAA;;;;AAAA;AA9BA;;;AACqC;;AAAiB;AAAjB;AAAA;;AAAhB;;AAAA;AAAA;AAAA;AAKjB;;AAAsB;;AAAtB;AAAA;;;AAEA;;AAAA;;AAAwB;;AAAxB;AAFA;;;AAIA;;AAAA;;AAJA;;;AAQA;;AAAA;;AAAgC;;AAAhC;AARA;;;AAYA;AAEc;;AAEF;;AAAoB;;AAAA;;AAApB;;;;;AAJZ;;;AAAA;;;AAAA;;AAqBF;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AARQ;AASa;;AAAnB;AALqB;AAMrB;AAAA;AAJkB;AAKa;AAA/B;AAHF;AAAA;AAMA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AACS;;AAAe;AAfhB;AAegB;AAAA;AAAf;AAAP;AAbS;AAAA;AAAA;AAcF;AAAA;AAAA;;AAAP;AAEA;AAZkB;AAYlB;AAAA;AAAA;;AAAA;AAZkB;AAYlB;AAAA;AACA;AAfqB;AAerB;AAAA;AAAA;;AAAA;AAfqB;AAerB;AAAA;AACA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AANF;AAAA;AASA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEI;;AAAe;AAzBX;AAyBW;AAAA;AAAf;AADF;AAtBS;AAAA;AAAA;AA0BsB;AAA/B;AAAA;AALF;AAAA;AAQA;;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEI;;AAAe;AAjCX;AAiCW;AAAA;AAAf;AADF;;AAKA;AAAA;;AAAA;AAAA;;;AAAA;;AAAA;;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAnCS;AAAA;AAAA;AAoCwB;AAA/B;AAAA;;;;;;;;AAPJ;AAAA;AAkBA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AACE;;;AACA;;;AAFF;AAAA;AAKA;;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;;AACE;AAAA;;AAAA;AAAA;;;AAAA;;AAAA;;;AAAA;;AAAA;AAAA;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;;;AAAK;AAAL;AAAK;AACY;;AAAf;;AAAA;;;;;;;;;;AAGF;;;AALF;AAAA;AAZA;;;AAxCW;AAAA;;AAAA;AAyCF;AAAA;AAAA;;AAAP;AAzCS;AAAA;;AAAA;AA0CF;AAAA;AAAA;;AAAP;AACA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AACA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;",
+  "mappings": ";;;;;;;;;;;;;;;;;AA4CA;;AAAA;AAAA;AAAA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;AAAA;AAAA;;;;;;AAAA;;;AAAA;;;;AAAA;AA9BA;;;AACqC;;AAAiB;AAAjB;AAAA;;AAAhB;;AAAA;AAAA;AAAA;AAKjB;;AAAsB;;AAAtB;AAAA;;;AAEA;;AAAA;;AAAwB;;AAAxB;AAFA;;;AAIA;;AAAA;;AAJA;;;AAQA;;AAAA;;AAAgC;;AAAhC;AARA;;;AAYA;AAEc;;AAEF;;AAAoB;;AAAA;;AAApB;;;;;AAJZ;;;AAAA;;;AAAA;;AAqBF;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AARQ;AASa;;AAAnB;AALqB;AAMrB;AAAA;AAJkB;AAKa;AAA/B;AAHF;AAAA;AAMA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AACS;;AAAe;AAfhB;AAegB;AAAA;AAAf;AAAP;AAbS;AAAA;AAAA;AAcF;AAAA;AAAA;;AAAP;AAEA;AAZkB;AAYlB;AAAA;AAAA;;AAAA;AAZkB;AAYlB;AAAA;AACA;AAfqB;AAerB;AAAA;AAAA;;AAAA;AAfqB;AAerB;AAAA;AACA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AANF;AAAA;AASA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEI;;AAAe;AAzBX;AAyBW;AAAA;AAAf;AADF;AAtBS;AAAA;AAAA;AA0BsB;AAA/B;AAAA;AALF;AAAA;AAQA;;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEI;;AAAe;AAjCX;AAiCW;AAAA;AAAf;AADF;;AAKA;AAAA;;AAAA;AAAA;;;AAAA;;AAAA;;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAnCS;AAAA;AAAA;AAoCwB;AAA/B;AAAA;;;;;;;;AAPJ;AAAA;AAkBA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AACiB;;AAAf;;AAAA;;;AACA;;;AAFF;AAAA;AAKA;;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;;AACE;AAAA;;AAAA;AAAA;;;AAAA;;AAAA;;;AAAA;;AAAA;AAAA;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;;;AAAK;AAAL;AAAK;AACY;;AAAf;;AAAA;;;;;;;;;;AAGF;;;AALF;AAAA;AAZA;;;AAxCW;AAAA;;AAAA;AAyCF;AAAA;AAAA;;AAAP;AAzCS;AAAA;;AAAA;AA0CF;AAAA;AAAA;;AAAP;AACA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AACA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;",
   "op_pc_offset": 0,
   "pc_events": {
     "1": {
@@ -52,19 +52,19 @@
       "stack_out": []
     },
     "26": {
-      "op": "pushbytess 0xaf236ac3 0x2753e742 0x0d977723 0xaa457d24 0xd94b1224 // method \"addToCirculation(uint64,address)void\", method \"instantiateAccount(address)void\", method \"instantiateAccounts(address[])void\", method \"transfer(address,address,uint64)void\", method \"multiTransfer((address,uint64)[])void\"",
+      "op": "pushbytess 0xaf236ac3 0x2753e742 0x0d977723 0x9fee7418 0xd94b1224 // method \"addToCirculation(uint64,address)void\", method \"instantiateAccount(address)void\", method \"instantiateAccounts(address[])void\", method \"transfer(address,uint64)void\", method \"multiTransfer((address,uint64)[])void\"",
       "defined_out": [
         "Method(addToCirculation(uint64,address)void)",
         "Method(instantiateAccount(address)void)",
         "Method(instantiateAccounts(address[])void)",
         "Method(multiTransfer((address,uint64)[])void)",
-        "Method(transfer(address,address,uint64)void)"
+        "Method(transfer(address,uint64)void)"
       ],
       "stack_out": [
         "Method(addToCirculation(uint64,address)void)",
         "Method(instantiateAccount(address)void)",
         "Method(instantiateAccounts(address[])void)",
-        "Method(transfer(address,address,uint64)void)",
+        "Method(transfer(address,uint64)void)",
         "Method(multiTransfer((address,uint64)[])void)"
       ]
     },
@@ -75,14 +75,14 @@
         "Method(instantiateAccount(address)void)",
         "Method(instantiateAccounts(address[])void)",
         "Method(multiTransfer((address,uint64)[])void)",
-        "Method(transfer(address,address,uint64)void)",
+        "Method(transfer(address,uint64)void)",
         "tmp%4#0"
       ],
       "stack_out": [
         "Method(addToCirculation(uint64,address)void)",
         "Method(instantiateAccount(address)void)",
         "Method(instantiateAccounts(address[])void)",
-        "Method(transfer(address,address,uint64)void)",
+        "Method(transfer(address,uint64)void)",
         "Method(multiTransfer((address,uint64)[])void)",
         "tmp%4#0"
       ]
@@ -2087,31 +2087,31 @@
       "stack_in": [],
       "op": "txna ApplicationArgs 1",
       "defined_out": [
-        "sender#0"
+        "receiver#0"
       ],
       "stack_out": [
-        "sender#0"
+        "receiver#0"
       ]
     },
     "330": {
       "op": "dup",
       "defined_out": [
-        "sender#0",
-        "sender#0 (copy)"
+        "receiver#0",
+        "receiver#0 (copy)"
       ],
       "stack_out": [
-        "sender#0",
-        "sender#0 (copy)"
+        "receiver#0",
+        "receiver#0 (copy)"
       ]
     },
     "331": {
       "op": "len",
       "defined_out": [
         "len%0#0",
-        "sender#0"
+        "receiver#0"
       ],
       "stack_out": [
-        "sender#0",
+        "receiver#0",
         "len%0#0"
       ]
     },
@@ -2120,10 +2120,10 @@
       "defined_out": [
         "32",
         "len%0#0",
-        "sender#0"
+        "receiver#0"
       ],
       "stack_out": [
-        "sender#0",
+        "receiver#0",
         "len%0#0",
         "32"
       ]
@@ -2132,10 +2132,10 @@
       "op": "==",
       "defined_out": [
         "eq%0#0",
-        "sender#0"
+        "receiver#0"
       ],
       "stack_out": [
-        "sender#0",
+        "receiver#0",
         "eq%0#0"
       ]
     },
@@ -2143,31 +2143,31 @@
       "error": "invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
       "op": "assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
       "stack_out": [
-        "sender#0"
+        "receiver#0"
       ]
     },
     "335": {
       "op": "txna ApplicationArgs 2",
       "defined_out": [
         "receiver#0",
-        "sender#0"
+        "tmp%2#0"
       ],
       "stack_out": [
-        "sender#0",
-        "receiver#0"
+        "receiver#0",
+        "tmp%2#0"
       ]
     },
     "338": {
       "op": "dup",
       "defined_out": [
         "receiver#0",
-        "receiver#0 (copy)",
-        "sender#0"
+        "tmp%2#0",
+        "tmp%2#0 (copy)"
       ],
       "stack_out": [
-        "sender#0",
         "receiver#0",
-        "receiver#0 (copy)"
+        "tmp%2#0",
+        "tmp%2#0 (copy)"
       ]
     },
     "339": {
@@ -2175,21 +2175,27 @@
       "defined_out": [
         "len%1#0",
         "receiver#0",
-        "sender#0"
+        "tmp%2#0"
       ],
       "stack_out": [
-        "sender#0",
         "receiver#0",
+        "tmp%2#0",
         "len%1#0"
       ]
     },
     "340": {
-      "op": "intc_2 // 32",
-      "stack_out": [
-        "sender#0",
-        "receiver#0",
+      "op": "intc_3 // 8",
+      "defined_out": [
+        "8",
         "len%1#0",
-        "32"
+        "receiver#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "receiver#0",
+        "tmp%2#0",
+        "len%1#0",
+        "8"
       ]
     },
     "341": {
@@ -2197,129 +2203,64 @@
       "defined_out": [
         "eq%1#0",
         "receiver#0",
-        "sender#0"
+        "tmp%2#0"
       ],
       "stack_out": [
-        "sender#0",
         "receiver#0",
+        "tmp%2#0",
         "eq%1#0"
       ]
     },
     "342": {
-      "error": "invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
-      "op": "assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
-      "stack_out": [
-        "sender#0",
-        "receiver#0"
-      ]
-    },
-    "343": {
-      "op": "txna ApplicationArgs 3",
-      "defined_out": [
-        "receiver#0",
-        "sender#0",
-        "tmp%4#0"
-      ],
-      "stack_out": [
-        "sender#0",
-        "receiver#0",
-        "tmp%4#0"
-      ]
-    },
-    "346": {
-      "op": "dup",
-      "defined_out": [
-        "receiver#0",
-        "sender#0",
-        "tmp%4#0",
-        "tmp%4#0 (copy)"
-      ],
-      "stack_out": [
-        "sender#0",
-        "receiver#0",
-        "tmp%4#0",
-        "tmp%4#0 (copy)"
-      ]
-    },
-    "347": {
-      "op": "len",
-      "defined_out": [
-        "len%2#0",
-        "receiver#0",
-        "sender#0",
-        "tmp%4#0"
-      ],
-      "stack_out": [
-        "sender#0",
-        "receiver#0",
-        "tmp%4#0",
-        "len%2#0"
-      ]
-    },
-    "348": {
-      "op": "intc_3 // 8",
-      "defined_out": [
-        "8",
-        "len%2#0",
-        "receiver#0",
-        "sender#0",
-        "tmp%4#0"
-      ],
-      "stack_out": [
-        "sender#0",
-        "receiver#0",
-        "tmp%4#0",
-        "len%2#0",
-        "8"
-      ]
-    },
-    "349": {
-      "op": "==",
-      "defined_out": [
-        "eq%2#0",
-        "receiver#0",
-        "sender#0",
-        "tmp%4#0"
-      ],
-      "stack_out": [
-        "sender#0",
-        "receiver#0",
-        "tmp%4#0",
-        "eq%2#0"
-      ]
-    },
-    "350": {
       "error": "invalid number of bytes for arc4.uint64",
       "op": "assert // invalid number of bytes for arc4.uint64",
       "stack_out": [
-        "sender#0",
         "receiver#0",
-        "tmp%4#0"
+        "tmp%2#0"
       ]
     },
-    "351": {
+    "343": {
       "op": "btoi",
       "defined_out": [
         "amount#0",
-        "receiver#0",
-        "sender#0"
+        "receiver#0"
       ],
       "stack_out": [
-        "sender#0",
         "receiver#0",
         "amount#0"
       ]
     },
-    "352": {
+    "344": {
+      "op": "txn Sender",
+      "defined_out": [
+        "amount#0",
+        "receiver#0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "receiver#0",
+        "amount#0",
+        "tmp%0#1"
+      ]
+    },
+    "346": {
+      "op": "cover 2",
+      "stack_out": [
+        "tmp%0#1",
+        "receiver#0",
+        "amount#0"
+      ]
+    },
+    "348": {
       "callsub": "contracts/payments.algo.ts::Payments._transfer",
       "op": "callsub _transfer",
       "stack_out": []
     },
-    "355": {
+    "351": {
       "callsub": "contracts/payments.algo.ts::coverFee",
       "op": "callsub coverFee"
     },
-    "358": {
+    "354": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1"
@@ -2328,18 +2269,18 @@
         "1"
       ]
     },
-    "359": {
+    "355": {
       "op": "return",
       "stack_out": []
     },
-    "360": {
+    "356": {
       "subroutine": "contracts/payments.algo.ts::Payments.multiTransfer[routing]",
       "params": {},
       "block": "multiTransfer",
       "stack_in": [],
       "op": "txna ApplicationArgs 1"
     },
-    "363": {
+    "359": {
       "op": "dupn 2",
       "defined_out": [
         "transfers#0",
@@ -2351,7 +2292,7 @@
         "transfers#0 (copy)"
       ]
     },
-    "365": {
+    "361": {
       "op": "intc_0 // 0",
       "stack_out": [
         "transfers#0",
@@ -2360,7 +2301,7 @@
         "0"
       ]
     },
-    "366": {
+    "362": {
       "error": "invalid array length header",
       "op": "extract_uint16 // on error: invalid array length header",
       "defined_out": [
@@ -2373,7 +2314,7 @@
         "aggregate%array_length%0#0"
       ]
     },
-    "367": {
+    "363": {
       "op": "dup",
       "stack_out": [
         "transfers#0",
@@ -2382,7 +2323,7 @@
         "aggregate%array_length%0#0"
       ]
     },
-    "368": {
+    "364": {
       "op": "cover 2",
       "defined_out": [
         "aggregate%array_length%0#0",
@@ -2395,7 +2336,7 @@
         "aggregate%array_length%0#0"
       ]
     },
-    "370": {
+    "366": {
       "op": "pushint 40",
       "defined_out": [
         "40",
@@ -2410,7 +2351,7 @@
         "40"
       ]
     },
-    "372": {
+    "368": {
       "op": "*",
       "defined_out": [
         "aggregate%array_length%0#0",
@@ -2424,7 +2365,7 @@
         "mul%0#0"
       ]
     },
-    "373": {
+    "369": {
       "op": "pushint 2",
       "defined_out": [
         "2",
@@ -2440,7 +2381,7 @@
         "2"
       ]
     },
-    "375": {
+    "371": {
       "op": "+",
       "defined_out": [
         "add%0#0",
@@ -2454,7 +2395,7 @@
         "add%0#0"
       ]
     },
-    "376": {
+    "372": {
       "op": "swap",
       "stack_out": [
         "transfers#0",
@@ -2463,7 +2404,7 @@
         "transfers#0"
       ]
     },
-    "377": {
+    "373": {
       "op": "len",
       "defined_out": [
         "add%0#0",
@@ -2478,7 +2419,7 @@
         "len%0#0"
       ]
     },
-    "378": {
+    "374": {
       "op": "==",
       "defined_out": [
         "aggregate%array_length%0#0",
@@ -2491,7 +2432,7 @@
         "eq%0#0"
       ]
     },
-    "379": {
+    "375": {
       "error": "invalid number of bytes for arc4.dynamic_array<contracts/payments.algo.ts::Transfer>",
       "op": "assert // invalid number of bytes for arc4.dynamic_array<contracts/payments.algo.ts::Transfer>",
       "stack_out": [
@@ -2499,7 +2440,7 @@
         "aggregate%array_length%0#0"
       ]
     },
-    "380": {
+    "376": {
       "op": "intc_0 // 0",
       "defined_out": [
         "aggregate%array_length%0#0",
@@ -2512,7 +2453,7 @@
         "item_index_internal%0#0"
       ]
     },
-    "381": {
+    "377": {
       "block": "multiTransfer_for_header@2",
       "stack_in": [
         "transfers#0",
@@ -2530,7 +2471,7 @@
         "item_index_internal%0#0"
       ]
     },
-    "382": {
+    "378": {
       "op": "dig 2",
       "defined_out": [
         "aggregate%array_length%0#0",
@@ -2544,7 +2485,7 @@
         "aggregate%array_length%0#0"
       ]
     },
-    "384": {
+    "380": {
       "op": "<",
       "defined_out": [
         "aggregate%array_length%0#0",
@@ -2558,7 +2499,7 @@
         "continue_looping%0#0"
       ]
     },
-    "385": {
+    "381": {
       "op": "bz multiTransfer_after_for@5",
       "stack_out": [
         "transfers#0",
@@ -2566,7 +2507,7 @@
         "item_index_internal%0#0"
       ]
     },
-    "388": {
+    "384": {
       "op": "dig 2",
       "defined_out": [
         "aggregate%array_length%0#0",
@@ -2580,7 +2521,7 @@
         "transfers#0"
       ]
     },
-    "390": {
+    "386": {
       "op": "extract 2 0",
       "defined_out": [
         "aggregate%array_length%0#0",
@@ -2595,7 +2536,7 @@
         "aggregate%array_trimmed%0#0"
       ]
     },
-    "393": {
+    "389": {
       "op": "dig 1",
       "stack_out": [
         "transfers#0",
@@ -2605,7 +2546,7 @@
         "item_index_internal%0#0"
       ]
     },
-    "395": {
+    "391": {
       "op": "dup",
       "defined_out": [
         "aggregate%array_length%0#0",
@@ -2623,7 +2564,7 @@
         "item_index_internal%0#0 (copy)"
       ]
     },
-    "396": {
+    "392": {
       "op": "cover 2",
       "stack_out": [
         "transfers#0",
@@ -2634,7 +2575,7 @@
         "item_index_internal%0#0 (copy)"
       ]
     },
-    "398": {
+    "394": {
       "op": "pushint 40",
       "defined_out": [
         "40",
@@ -2654,7 +2595,7 @@
         "40"
       ]
     },
-    "400": {
+    "396": {
       "op": "*",
       "defined_out": [
         "aggregate%array_length%0#0",
@@ -2672,7 +2613,7 @@
         "aggregate%bytes_offset%0#0"
       ]
     },
-    "401": {
+    "397": {
       "op": "pushint 40",
       "stack_out": [
         "transfers#0",
@@ -2684,7 +2625,7 @@
         "40"
       ]
     },
-    "403": {
+    "399": {
       "error": "index access is out of bounds",
       "op": "extract3 // on error: index access is out of bounds",
       "defined_out": [
@@ -2701,7 +2642,7 @@
         "aggregate%encoded_element%0#0"
       ]
     },
-    "404": {
+    "400": {
       "op": "dup",
       "defined_out": [
         "aggregate%array_length%0#0",
@@ -2719,7 +2660,7 @@
         "aggregate%encoded_element%0#0 (copy)"
       ]
     },
-    "405": {
+    "401": {
       "op": "extract 0 32",
       "defined_out": [
         "aggregate%array_length%0#0",
@@ -2737,7 +2678,7 @@
         "receiver#0"
       ]
     },
-    "408": {
+    "404": {
       "op": "swap",
       "stack_out": [
         "transfers#0",
@@ -2748,7 +2689,7 @@
         "aggregate%encoded_element%0#0"
       ]
     },
-    "409": {
+    "405": {
       "op": "intc_2 // 32",
       "defined_out": [
         "32",
@@ -2768,7 +2709,7 @@
         "32"
       ]
     },
-    "410": {
+    "406": {
       "op": "extract_uint64",
       "defined_out": [
         "aggregate%array_length%0#0",
@@ -2786,7 +2727,7 @@
         "amount#0"
       ]
     },
-    "411": {
+    "407": {
       "op": "txn Sender",
       "defined_out": [
         "aggregate%array_length%0#0",
@@ -2806,7 +2747,7 @@
         "tmp%2#0"
       ]
     },
-    "413": {
+    "409": {
       "op": "cover 2",
       "stack_out": [
         "transfers#0",
@@ -2818,7 +2759,7 @@
         "amount#0"
       ]
     },
-    "415": {
+    "411": {
       "callsub": "contracts/payments.algo.ts::Payments._transfer",
       "op": "callsub _transfer",
       "stack_out": [
@@ -2828,7 +2769,7 @@
         "item_index_internal%0#0"
       ]
     },
-    "418": {
+    "414": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1",
@@ -2844,7 +2785,7 @@
         "1"
       ]
     },
-    "419": {
+    "415": {
       "op": "+",
       "stack_out": [
         "transfers#0",
@@ -2853,7 +2794,7 @@
         "item_index_internal%0#0"
       ]
     },
-    "420": {
+    "416": {
       "op": "bury 1",
       "defined_out": [
         "aggregate%array_length%0#0",
@@ -2866,10 +2807,10 @@
         "item_index_internal%0#0"
       ]
     },
-    "422": {
+    "418": {
       "op": "b multiTransfer_for_header@2"
     },
-    "425": {
+    "421": {
       "block": "multiTransfer_after_for@5",
       "stack_in": [
         "transfers#0",
@@ -2879,7 +2820,7 @@
       "callsub": "contracts/payments.algo.ts::coverFee",
       "op": "callsub coverFee"
     },
-    "428": {
+    "424": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1"
@@ -2891,7 +2832,7 @@
         "1"
       ]
     },
-    "429": {
+    "425": {
       "op": "return",
       "stack_out": [
         "transfers#0",
@@ -2899,7 +2840,7 @@
         "item_index_internal%0#0"
       ]
     },
-    "430": {
+    "426": {
       "subroutine": "contracts/payments.algo.ts::Payments._transfer",
       "params": {
         "sender#0": "bytes",
@@ -2910,7 +2851,7 @@
       "stack_in": [],
       "op": "proto 3 0"
     },
-    "433": {
+    "429": {
       "op": "bytec_0 // \"b\"",
       "defined_out": [
         "\"b\""
@@ -2919,7 +2860,7 @@
         "\"b\""
       ]
     },
-    "434": {
+    "430": {
       "op": "frame_dig -3",
       "defined_out": [
         "\"b\"",
@@ -2930,7 +2871,7 @@
         "sender#0 (copy)"
       ]
     },
-    "436": {
+    "432": {
       "op": "concat",
       "defined_out": [
         "box_prefixed_key%0#0"
@@ -2939,7 +2880,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "437": {
+    "433": {
       "op": "dup",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -2950,7 +2891,7 @@
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "438": {
+    "434": {
       "op": "box_len",
       "defined_out": [
         "_%0#0",
@@ -2963,28 +2904,28 @@
         "maybe_exists%0#0"
       ]
     },
-    "439": {
+    "435": {
       "op": "bury 1",
       "stack_out": [
         "box_prefixed_key%0#0",
         "maybe_exists%0#0"
       ]
     },
-    "441": {
+    "437": {
       "error": "sender does not exist",
       "op": "assert // sender does not exist",
       "stack_out": [
         "box_prefixed_key%0#0"
       ]
     },
-    "442": {
+    "438": {
       "op": "bytec_0 // \"b\"",
       "stack_out": [
         "box_prefixed_key%0#0",
         "\"b\""
       ]
     },
-    "443": {
+    "439": {
       "op": "frame_dig -2",
       "defined_out": [
         "\"b\"",
@@ -2997,7 +2938,7 @@
         "receiver#0 (copy)"
       ]
     },
-    "445": {
+    "441": {
       "op": "concat",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3008,7 +2949,7 @@
         "box_prefixed_key%1#0"
       ]
     },
-    "446": {
+    "442": {
       "op": "dup",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3021,7 +2962,7 @@
         "box_prefixed_key%1#0 (copy)"
       ]
     },
-    "447": {
+    "443": {
       "op": "box_len",
       "defined_out": [
         "_%1#0",
@@ -3036,7 +2977,7 @@
         "maybe_exists%1#0"
       ]
     },
-    "448": {
+    "444": {
       "op": "bury 1",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3044,7 +2985,7 @@
         "maybe_exists%1#0"
       ]
     },
-    "450": {
+    "446": {
       "error": "receiver does not exist",
       "op": "assert // receiver does not exist",
       "stack_out": [
@@ -3052,7 +2993,7 @@
         "box_prefixed_key%1#0"
       ]
     },
-    "451": {
+    "447": {
       "op": "dig 1",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3060,7 +3001,7 @@
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "453": {
+    "449": {
       "op": "box_get",
       "defined_out": [
         "aggregate%box_get%0#0",
@@ -3075,7 +3016,7 @@
         "aggregate%box_get%1#0"
       ]
     },
-    "454": {
+    "450": {
       "op": "pop",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3083,7 +3024,7 @@
         "aggregate%box_get%0#0"
       ]
     },
-    "455": {
+    "451": {
       "op": "btoi",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3096,7 +3037,7 @@
         "maybe_value_converted%0#0"
       ]
     },
-    "456": {
+    "452": {
       "op": "frame_dig -1",
       "defined_out": [
         "amount#0 (copy)",
@@ -3111,7 +3052,7 @@
         "amount#0 (copy)"
       ]
     },
-    "458": {
+    "454": {
       "op": "-",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3124,7 +3065,7 @@
         "tmp%0#0"
       ]
     },
-    "459": {
+    "455": {
       "op": "itob",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3137,7 +3078,7 @@
         "encoded_value%0#0"
       ]
     },
-    "460": {
+    "456": {
       "op": "uncover 2",
       "stack_out": [
         "box_prefixed_key%1#0",
@@ -3145,7 +3086,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "462": {
+    "458": {
       "op": "swap",
       "stack_out": [
         "box_prefixed_key%1#0",
@@ -3153,20 +3094,20 @@
         "encoded_value%0#0"
       ]
     },
-    "463": {
+    "459": {
       "op": "box_put",
       "stack_out": [
         "box_prefixed_key%1#0"
       ]
     },
-    "464": {
+    "460": {
       "op": "dup",
       "stack_out": [
         "box_prefixed_key%1#0",
         "box_prefixed_key%1#0 (copy)"
       ]
     },
-    "465": {
+    "461": {
       "op": "box_get",
       "defined_out": [
         "aggregate%box_get%2#0",
@@ -3179,14 +3120,14 @@
         "aggregate%box_get%3#0"
       ]
     },
-    "466": {
+    "462": {
       "op": "pop",
       "stack_out": [
         "box_prefixed_key%1#0",
         "aggregate%box_get%2#0"
       ]
     },
-    "467": {
+    "463": {
       "op": "btoi",
       "defined_out": [
         "box_prefixed_key%1#0",
@@ -3197,7 +3138,7 @@
         "maybe_value_converted%1#0"
       ]
     },
-    "468": {
+    "464": {
       "op": "frame_dig -1",
       "stack_out": [
         "box_prefixed_key%1#0",
@@ -3205,7 +3146,7 @@
         "amount#0 (copy)"
       ]
     },
-    "470": {
+    "466": {
       "op": "+",
       "defined_out": [
         "box_prefixed_key%1#0",
@@ -3216,7 +3157,7 @@
         "tmp%1#0"
       ]
     },
-    "471": {
+    "467": {
       "op": "itob",
       "defined_out": [
         "box_prefixed_key%1#0",
@@ -3227,11 +3168,11 @@
         "encoded_value%1#0"
       ]
     },
-    "472": {
+    "468": {
       "op": "box_put",
       "stack_out": []
     },
-    "473": {
+    "469": {
       "retsub": true,
       "op": "retsub"
     }
